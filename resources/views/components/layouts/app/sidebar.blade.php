@@ -13,9 +13,16 @@
 
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Front Desk')" class="grid">
-                    <flux:navlist.item icon="queue-list" :href="route('patient-queue')" :current="request()->routeIs('patient-queue')" wire:navigate>Antrian</flux:navlist.item>
-                    <flux:navlist.item icon="clipboard-document-list" :href="route('health-facility-referral')" :current="request()->routeIs('health-facility-referral')" wire:navigate>Rujukan</flux:navlist.item>
-                    <flux:navlist.item icon="queue-list" :href="route('doctor-queue')" :current="request()->routeIs('doctor-queue')" wire:navigate>Antrian Konsultasi</flux:navlist.item>
+                    @role('admin')
+                        <flux:navlist.item icon="queue-list" :href="route('patient-queue')" :current="request()->routeIs('patient-queue')" wire:navigate>Antrian</flux:navlist.item>
+                        <flux:navlist.item icon="clipboard-document-list" :href="route('health-facility-referral')" :current="request()->routeIs('health-facility-referral')" wire:navigate>Rujukan</flux:navlist.item>
+                        <flux:navlist.item icon="queue-list" :href="route('doctor-queue')" :current="request()->routeIs('doctor-queue')" wire:navigate>Antrian Konsultasi</flux:navlist.item>
+                    @endrole
+
+                    @role('doctor')
+                        <flux:navlist.item icon="queue-list" :href="route('doctor-queue')" :current="request()->routeIs('doctor-queue')" wire:navigate>Antrian Konsultasi</flux:navlist.item>
+                    @endrole
+
                 </flux:navlist.group>
             </flux:navlist>
 
