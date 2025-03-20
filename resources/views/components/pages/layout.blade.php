@@ -1,4 +1,4 @@
-<div class="flex items-start max-md:flex-col">
+<div class="flex items-start w-full max-md:flex-col">
 
     <flux:separator class="md:hidden" />
 
@@ -6,7 +6,7 @@
         <flux:heading>{{ $heading ?? '' }}</flux:heading>
         <flux:subheading>{{ $subheading ?? '' }}</flux:subheading>
 
-        <div class="mt-5 w-full max-w-lg">
+        <div class="mt-5 w-full">
             {{ $slot }}
         </div>
     </div>
