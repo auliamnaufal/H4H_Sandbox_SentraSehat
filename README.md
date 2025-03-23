@@ -11,4 +11,4 @@ SentraSehat adalah web-app inovatif yang dirancang untuk mengintegrasikan rekam 
 
 Link demo video: https://drive.google.com/file/d/111Rn3GcOgX8u4UN_8zUQKgYc0F1_69nG/view?usp=drivesdk
 
-Link Deployment: https://6b05-110-138-84-6.ngrok-free.app
+Link Deployment: https://6b05-110-138-84-6.ngrok-free.app/login
