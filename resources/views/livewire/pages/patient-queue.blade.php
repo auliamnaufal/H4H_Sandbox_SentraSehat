@@ -51,5 +51,7 @@
                 </x-action-message>
             </div>
         </form>
+
+        <livewire:queue-table theme="tailwind" />
     </x-pages.layout>
 </div>

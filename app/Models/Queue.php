@@ -11,7 +11,7 @@ class Queue extends Model
 
     public function patient(): BelongsTo
     {
-        return $this->belongsTo(User::class, "nik", "patient_nik");
+        return $this->belongsTo(User::class, "patient_nik", "nik");
     }
 
     public function healthFacility(): BelongsTo
