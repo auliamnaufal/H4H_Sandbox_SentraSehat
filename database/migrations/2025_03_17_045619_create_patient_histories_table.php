@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('patient_histories', function (Blueprint $table) {
             $table->id();
+            $table->text("complaint");
             $table->text("diagnosis");
             $table->text("treatment");
+            $table->text("medicine");
             $table->foreignId("patient_nik")->constrained("users", "nik");
             $table->foreignId("health_facility_id")->constrained();
             $table->foreignId("poly_id")->constrained();
